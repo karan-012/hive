@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gene Prediction Website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="1.css">
+    <script src="j1.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Gene Prediction Website</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="home.htm">Home</a></li>
+			<li><a href="prediction.html">Gene Prediction</a></li>
+			<li><a href="blast.html">BLAST</a></li>
+			<li><a href="about.html">About</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="welcome">
+			<h2>Welcome to Gene Prediction Website</h2>
+			<p>Enter your sequence in the form below and click "Predict" to get started.</p>
+		</section>
+		<section id="gene-prediction">
+			<h2>Gene Prediction</h2>
+			<form>
+				<label for="sequence">Enter sequence:</label>
+				<textarea id="sequence" name="sequence" rows="10" cols="50" placeholder="Paste your sequence here..."></textarea>
+				<button id="predict-button" type="button" disabled>Predict</button>
+			</form>
+			<div id="loading-indicator" style="display:none;"><img src="loading.gif"></div>
+			<div id="prediction-results" style="display:none;">
+				<h3>Prediction Results</h3>
+				<table>
+					<tr>
+						<th>Gene ID</th>
+						<th>Start</th>
+						<th>End</th>
+						<th>Strand</th>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section id="blast">
+			<h2>BLAST</h2>
+			<form>
+				<label for="sequence">Enter sequence:</label>
+				<textarea id="sequence" name="sequence" rows="10" cols="50" placeholder="Paste your sequence here..."></textarea>
+				<button id="blast-button" type="button" disabled>BLAST</button>
+			</form>
+			<div id="loading-indicator" style="display:none;"><img src="loading.gif"></div>
+			<div id="blast-results" style="display:none;">
+				<h3>BLAST Results</h3>
+				<table>
+					<tr>
+						<th>Hit ID</th>
+						<th>Score</th>
+						<th>E-value</th>
+					</tr>
+				</table>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Gene Prediction Website</p>
+	</footer>
+</body>
+</html>
